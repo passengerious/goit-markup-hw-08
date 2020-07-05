@@ -1,0 +1,87 @@
+.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+
+  .item {
+    width: 100%;
+    text-align: center;
+    // width: 23%;
+    height: 251px;
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+    &:before {
+      display: block;
+      content: '';
+      // width: 270px;
+      height: 150px;
+      margin-bottom: 30px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #f5f4fa;
+      border-radius: 4px;
+    }
+  }
+}
+
+.icon-antenna::before {
+  background-image: url('../images/antenna.svg');
+}
+
+.icon-clock::before {
+  background-image: url('../images/clock.svg');
+}
+
+.icon-diagram::before {
+  background-image: url('../images/diagram.svg');
+}
+
+.icon-astronaut::before {
+  background-image: url('../images/astronaut.svg');
+}
+
+.section-text {
+  text-align: left;
+  margin: 0;
+  color: $primary-text-color;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.section-titles {
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $title-text-color;
+}
+
+@media screen and (min-width: 768px) {
+  .display-flex {
+    justify-content: space-between;
+    .item {
+      width: 48%;
+      &:not(:first-child) {
+        margin: 0;
+      }
+      &:nth-child(n + 3) {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .display-flex {
+    .item {
+      width: 24%;
+      margin: 0 !important;
+    }
+  }
+}
